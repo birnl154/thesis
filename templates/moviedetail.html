@@ -20,17 +20,11 @@
         <!-- Reviews box -->
         <div class="reviews">
             <h2>Links:</h2>
-            <ul>
-                {% for review in reviews %}
-                    <li>{{ review }}</li>
-                {% endfor %}
-            </ul>
 
             <!-- Write a review box -->
-         
             <form action="" method="POST">
                 {{ form.hidden_tag() }}
-                <label for="review">Add a Link</label><br><br>
+                <label for="review">Add a Link:</label><br><br>
                 {{ form.review(rows=5, cols=50) }}<br>
                 {{ form.submit() }}
             </form>

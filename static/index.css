@@ -38,6 +38,33 @@ a {
     color: #5e5463;
     margin-top: 10px;
 }
+
+#header {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Initial styles for the h1 */
+#header h1 {
+    transition: opacity 0.3s ease;
+}
+
+/* Additional text to display on hover */
+#header .hover-text {
+    display: none; /* Hide the text initially */
+    font-family: "Pressio-Condensed", sans-serif;
+    font-weight: 700;
+    color: #5e5463;
+    font-size: 50px; /* Adjusted size for readability */
+}
+
+/* On hover, hide h1 and show hover-text */
+
+#header:hover .hover-text {
+    display: block; /* Show the additional text */
+}
 /* Form input styles */
 
 .search-form {
