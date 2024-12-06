@@ -52,7 +52,7 @@ body {
 h1 {
     font-family: "Pressio-Condensed", sans-serif;
     font-weight: 700;
-    color: #c6add0;
+    color: #e0a4f8;
     font-size: 80px; /* Adjusted size for readability */
     margin-bottom: 20px; /* Space below the H1 */
 }
@@ -62,7 +62,7 @@ h2 {
     font-family: "Pressio-Condensed", sans-serif;
     font-weight: 300;
     font-size: 60px;
-    color: #c6add0;
+    color: #e0a4f8;
     margin-top: 10px;
 }
 
