@@ -19,7 +19,7 @@
 
         <!-- Reviews box -->
         <div class="reviews">
-            <h2>Reviews:</h2>
+            <h2>Links:</h2>
             <ul>
                 {% for review in reviews %}
                     <li>{{ review }}</li>
@@ -30,7 +30,7 @@
          
             <form action="" method="POST">
                 {{ form.hidden_tag() }}
-                {{ form.review.label }}<br><br>
+                <label for="review">Add a Link</label><br><br>
                 {{ form.review(rows=5, cols=50) }}<br>
                 {{ form.submit() }}
             </form>

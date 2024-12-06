@@ -23,7 +23,7 @@
                 <div class="movie-item">
                     <img src="{{ 'https://image.tmdb.org/t/p/w200' + movie['poster_path'] if movie['poster_path'] else url_for('static', filename='notfound.png') }}" alt="{{ movie['title'] }}">
                     <h3>{{ movie['title'] }}</h3>
-                    <a href="{{ url_for('view_movie', movie_id=movie['id']) }}">Write a Review</a>
+                    <a href="{{ url_for('view_movie', movie_id=movie['id']) }}">View</a>
                 </div>
             {% endfor %}
         </div>
