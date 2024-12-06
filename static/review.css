@@ -1,0 +1,133 @@
+/* General body styles */
+body {
+    background-color: #ffff45;
+    text-align: left;
+    padding: 60px;
+}
+.movie-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;  /* Space between the movie details and reviews */
+    gap: 30px; /* Space between boxes */
+    margin-top: 20px;
+    margin-bottom:20px
+}
+
+/* Movie details box */
+.movie-details {
+    flex: 1;
+    min-width: 300px; /* Ensure it has a minimum width */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+/* Reviews box */
+.reviews {
+    flex: 2;
+    min-width: 300px; /* Ensure it has a minimum width */
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+/* Styling for list items inside the reviews */
+.reviews ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.reviews li {
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+    font-family: "Pressio-Condensed", sans-serif;
+    font-weight: 200;
+    font-size: 40px;
+    color: #5e5463;
+}
+
+/* Main header styles */
+h1 {
+    font-family: "Pressio-Condensed", sans-serif;
+    font-weight: 700;
+    color: #c6add0;
+    font-size: 80px; /* Adjusted size for readability */
+    margin-bottom: 20px; /* Space below the H1 */
+}
+
+/* Subheader styles */
+h2 {
+    font-family: "Pressio-Condensed", sans-serif;
+    font-weight: 300;
+    font-size: 60px;
+    color: #c6add0;
+    margin-top: 10px;
+}
+
+h3 {
+    font-family: "Pressio-Condensed", sans-serif;
+    font-weight: 200;
+    font-size: 40px;
+    color: #5e5463;
+    margin-top: 10px;
+}
+
+a {
+    font-family: "Pressio-Condensed", sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+    color: #5e5463;
+    margin-top: 10px;
+    font-size: 50px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#submit {
+    font-family: "Pressio-Condensed", sans-serif;
+    font-size: 30px;
+    font-weight: 200;
+    background-color:#5e5463;
+    width:auto;
+    padding:5px;
+    margin: 10px 0px 10px 00px;
+    color: #ffffff;
+}
+form {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 2rem;
+    font-family: "Pressio-Condensed", sans-serif;
+    font-weight: 50;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+
+form button {
+    padding: 10px 20px;
+    margin-left:20px;
+    font-size: 2rem;
+    font-family: "Pressio-Condensed", sans-serif;
+    font-weight: 50;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #555;
+}
+

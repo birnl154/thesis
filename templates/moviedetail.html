@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ movie['title'] }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='review.css') }}">
+    <link rel="stylesheet" href="https://use.typekit.net/zzt7liu.css">
+</head>
+<body>
+    <a href="{{ url_for('index') }}">Back to Search</a>
+    <div class="movie-container">
+        
+        <!-- Movie details box -->
+        <div class="movie-details">
+            <h1>{{ movie['title'] }}</h1>
+            <img src="https://image.tmdb.org/t/p/w500{{ movie['poster_path'] }}" alt="{{ movie['title'] }}">
+            <h3>{{ movie['overview'] }}</h3>
+        </div>
+
+        <!-- Reviews box -->
+        <div class="reviews">
+            <h2>Reviews:</h2>
+            <ul>
+                {% for review in reviews %}
+                    <li>{{ review }}</li>
+                {% endfor %}
+            </ul>
+
+            <!-- Write a review box -->
+         
+            <form action="" method="POST">
+                {{ form.hidden_tag() }}
+                {{ form.review.label }}<br><br>
+                {{ form.review(rows=5, cols=50) }}<br>
+                {{ form.submit() }}
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

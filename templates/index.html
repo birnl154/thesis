@@ -4,29 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Search</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <link rel="stylesheet" href="https://use.typekit.net/zzt7liu.css">
 </head>
 <body>
-    <h1>Search for a Movie</h1>
-    <form action="/search" method="POST">
-        <label for="movie">Enter Movie Title:</label>
-        <input type="text" id="movie" name="movie" required>
+    <body>
+        <h1 class="typewriter">CHAINMAIL</h1>
+       <!-- Movie Search Form -->
+    <form action="/search" method="POST" class="search-form">
+        <input type="text" name="movie" placeholder="Search for a movie" required>
         <button type="submit">Search</button>
     </form>
 
     {% if movies %}
         <h2>Search Results:</h2>
-        <ul>
+        <div class="movie-list">
             {% for movie in movies %}
-                <li>
-                    <h3>{{ movie['title'] }} ({{ movie['release_date'] }})</h3>
-                    <img src="https://image.tmdb.org/t/p/w500{{ movie['poster_path'] if movie['poster_path'] else '/default_poster.jpg' }}" alt="{{ movie['title'] }} poster">
-
-                </li>
+                <div class="movie-item">
+                    <img src="{{ 'https://image.tmdb.org/t/p/w200' + movie['poster_path'] if movie['poster_path'] else url_for('static', filename='notfound.png') }}" alt="{{ movie['title'] }}">
+                    <h3>{{ movie['title'] }}</h3>
+                    <a href="{{ url_for('view_movie', movie_id=movie['id']) }}">Write a Review</a>
+                </div>
             {% endfor %}
-        </ul>
-    {% else %}
-        <p>No results found</p>
+        </div>
     {% endif %}
+
+        <script src="/thesis/static/index.js"></script>
 </body>
+
 </html>
